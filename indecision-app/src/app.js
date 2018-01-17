@@ -1,22 +1,10 @@
-var user = {
-  name: 'Leo',
-  location: 'Floripa',
-  age: 24
-}
 
-function getLocation(location) {
-  if(location) {
-    return <p>Location: {location}</p>
-  }
-}
+import React from 'react';
+import ReactDOM from 'react-dom'
 
-var template = (
-  <div>
-    <h1>{user.name ? user.name : 'Anonymous'}</h1>
-    {user.age > 18 && <p>Age: {user.age}</p>}
-    {getLocation(user.location)}
-  </div>
-)
-var appRoot = document.getElementById('app');
+import IndecisionApp from './components/IndecisionApp';
 
-ReactDOM.render(template, appRoot);
+import 'normalize.css/normalize.css'
+import './styles/styles.scss';
+
+ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
